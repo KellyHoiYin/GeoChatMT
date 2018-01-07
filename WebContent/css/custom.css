@@ -1,0 +1,130 @@
+.customButton {
+	margin: .5rem;
+	border-color: #663300;
+	background-color: #A87D52;
+	font-size: 1em;
+}
+
+.customButton:hover, .customButton:active {
+	margin: .5rem;
+	border-color: #663300 !important;
+	background-color: #8C6640 !important;
+}
+
+.customButton:disabled {
+	margin: .5rem;
+	border-color: #FFFFFF !important;
+	background-color: #9D7D5D !important;
+}
+
+.customMargin {
+	margin: .5rem;
+	width: -webkit-fill-available;
+}
+
+.customCenterAlign {
+	text-align: center;
+	width: -webkit-fill-available;
+}
+
+.customLink {
+	font-size: .8em;
+	color: #663300;
+}
+
+.customErrorText {
+	color: #ff0000;
+	font-size: .8em;
+	margin-top: 2px;
+}
+
+input.ng-invalid {
+	outline: none;
+	border-color: #ff0000;
+	box-shadow: 0 0 5px #ff0000;
+}
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background: #9D7D5D;
+    color: #000000;
+    transition: all 0.3s;
+}
+
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    text-align: center;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: #140A00;
+    border-top: 1px solid #ECECEC;
+    margin: 0px 10px;
+}
+
+#sidebar ul li a:active {
+    color: #ffffff;
+}
+
+.customFloating {
+	margin-top: 10px;
+  	margin-left: 10px;
+  	z-index: 99;
+  	border: none;
+  	outline: none;
+  	background-color: #D1C2B2;
+  	padding: 10px 15px;
+  	border-radius: 30px;
+  	position: fixed;
+}
+
+#content {
+	width: -webkit-fill-available;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
+
+.smallText {
+	font-style: italic;
+	font-size: 0.8em;
+}
+
+#addChatModal {
+	border: 1px solid #A6A7A8;
+	box-shadow: inset 0 0 5px #A6A7A8;
+}
+
+.customChatContainer {
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+	border: 1px solid #D2D4D6;
+	box-shadow: inset 0 0 5px #D2D4D6;
+}
+
+.customRightText {
+	text-align: right;
+	margin: 0px;
+}

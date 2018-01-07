@@ -1,0 +1,40 @@
+<div class="container" style="padding: 0px" ng-controller="RegisterCtrl">
+	<div class="container-fluid"
+		style="background-color: #D2D4D6; padding: .7rem; margin-bottom: 2rem">
+		<h5 style="margin: 5px">Register</h5>
+	</div>
+	<form class="form-signin" role="form" name="regForm">
+		<div class="customMargin form-group">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+				<input type="email" name="email" class="form-control"
+					ng-model="user.email" placeholder="Email address">
+			</div>
+			<p class="customCenterAlign customErrorText"
+				ng-show="regForm.email.$invalid">Enter a valid email.</p>
+		</div>
+		<div class="customMargin form-group">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-key"></i></span> <input
+					type="password" name="password" class="form-control"
+					ng-model="user.password" ng-minlength="8" placeholder="Password">
+			</div>
+			<p class="customCenterAlign customErrorText"
+				ng-show="regForm.password.$error.minlength">Min password length
+				is 8 characters.</p>
+		</div>
+
+		<button ng-click="register();"
+			class="customButton customMargin btn btn-lg btn-primary btn-block"
+			ng-disabled="!user.email || !user.password" type="submit"
+			style="margin-top: 2rem">Register</button>
+
+		<label class="customCenterAlign checkbox"> <a href="#!login"
+			class="customLink">Existing user? Login here!</a>
+		</label>
+
+		<hr ng-show="regError">
+		<p class="customCenterAlign customErrorText" ng-show="regError">{{regErrorMessage}}</p>
+	</form>
+
+</div>

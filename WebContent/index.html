@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="GeoChat">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Geo Chat</title>
+<!-- 
+<script data-require="angular.js@1.6.0" data-semver="1.6.0"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script> -->
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.6.0/angular-route.min.js"></script><!-- 
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8AyUCyzvpeLl-bBLMqBAQ3RqVBady6rA&callback=initMap"
+  type="text/javascript"></script>
+<script type="text/javascript" src="js/ng-map.js"></script>
+<script type="text/javascript" src="js/ng-map.min.js"></script> -->
+
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+<link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body ng-controller="IndexCtrl as index">
+
+	<div class="container-fluid"
+		style="background-color: #A6A7A8; padding: 1rem; position: fixed; width:-webkit-fill-available">
+		<h4 style="margin-bottom: 0px; text-align: center; color: #663300; font-weight: bold">{{
+			index.appName }}</h4>
+	</div>
+
+	<div ng-view style="top: 48px; position: relative"></div>
+
+	<!-- 
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script src="scripts/app.js"></script>
+
+	<script src="scripts/controllers/index.js"></script>
+
+	<script src="scripts/controllers/login.js"></script>	
+	<script src="scripts/controllers/register.js"></script>
+	<script src="scripts/controllers/main.js"></script>
+	<script src="scripts/controllers/chat.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+	<script src="scripts/firebase-login.js"></script>
+	<script
+		src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+</body>
+</html>

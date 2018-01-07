@@ -1,0 +1,36 @@
+<div class="container" style="padding: 0px" ng-controller="LoginCtrl">
+	<div class="container-fluid"
+		style="background-color: #D2D4D6; padding: .7rem; margin-bottom: 2rem">
+		<h5 style="margin: 5px">Login</h5>
+	</div>
+	<form class="form-signin" role="form" name="signinForm">
+		<div class="customMargin form-group">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+				<input type="email" class="form-control" name="email"
+					ng-model="user.email" placeholder="Email address">
+			</div>
+			<p class="customCenterAlign customErrorText"
+				ng-show="regForm.email.$invalid">Enter a valid email.</p>
+		</div>
+		<div class="customMargin form-group">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-key"></i></span> <input
+					type="password" class="form-control" name="password"
+					ng-model="user.password" placeholder="Password">
+			</div>
+		</div>
+
+		<button ng-click="login($event)"
+			class="customButton customMargin btn btn-lg btn-primary btn-block"
+			type="submit" style="margin-top: 2rem">Login</button>
+
+		<label class="customCenterAlign checkbox"> <a
+			href="#!register" class="customLink">New user? Register here!</a>
+		</label>
+
+		<hr ng-show="loginError">
+		<p class="customCenterAlign customErrorText" ng-show="loginError">{{loginErrorMessage}}</p>
+	</form>
+
+</div>

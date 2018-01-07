@@ -1,0 +1,16 @@
+{
+    "name": "geo-chat",
+    "version": "1.0.0",
+    "description": "Geo Chat - a geographical chatting application",
+    "repository": "",
+    "license": "MIT",
+    "devDependencies": {
+        "http-server": "^0.10.0"
+    },
+    "scripts": {
+        "start": "http-server -a localhost -p 8000 -c-1 ./WebContent"
+    },
+    "dependencies": {
+        "ngmap": "^1.18.4"
+    }
+}
