@@ -1,6 +1,6 @@
 app.controller('RegisterCtrl', [
-	'$scope','$location','$firebaseAuth', 
-	function($scope,$location,$firebaseAuth) {
+	'$scope','$location','$firebaseAuth','CommonProp',
+	function($scope,$location,$firebaseAuth,CommonProp) {
 	
 	var auth = $firebaseAuth();
 		
@@ -10,7 +10,9 @@ app.controller('RegisterCtrl', [
             var password = $scope.user.password;
             if (email && password) {
                 auth.$createUserWithEmailAndPassword(email, password)
-                    .then(function() {
+                    .then(function(user) {
+        	        	CommonProp.setUser(user.email);
+        	        	CommonProp.setUserId(user.uid);
                     	$location.path('/main');
                     }, function(error) {
                     	$scope.regError = true;
@@ -20,3 +22,6 @@ app.controller('RegisterCtrl', [
         }
     };
 }]);
+
+
+

@@ -1,54 +1,61 @@
 <div class="container" style="padding: 0px" ng-controller="MainCtrl">
-	
+
 	<div class="wrapper">
-	
+
 		<nav id="sidebar">
-	        <!-- Sidebar Header -->
-	        <div class="sidebar-header">
-	            <h5 style="margin-top: 0px; margin-bottom: 0px">{{ email }}</h5>
-	        </div>
-	
-	        <!-- Sidebar Links -->
-	        <ul class="list-unstyled components">
-	            <li><a href="#!main">Chats</a>
-	            	<ul style="list-style-type: none">
-	            		<li ng-repeat="item in chatItems" class="smallText"><a href="#{{ item.link }}"> {{ item.title }} </a></li>
-	            	</ul>
-	            </li>
-	            <li><a ng-click="logout()">Logout</a></li>
-	        </ul>
-	     </nav>
-	     
-		<div id="content">
-		    <button type="button" id="sidebarCollapse" class="customFloating btn navbar-btn">
-		        <i class="fa fa-bookmark"></i>
-		    </button>
-		    
-		    <div class="container-fluid"
-			style="background-color: #D2D4D6; padding: .7rem; text-align: center">
-			<h5 style="margin: 5px">{{ city }}</h5>
-			<span class="smallText">{{ locDecimDeg }}</span>
+			<!-- Sidebar Header -->
+			<div class="sidebar-header">
+				<h5 style="margin-top: 0px; margin-bottom: 0px">{{ email }}</h5>
 			</div>
-			
-			<button type="button" class="customCenterAlign btn" style="background-color: #F2F2F3; padding: 10px" ng-click="toggleAddChat()">Add Chat</button>
+
+			<!-- Sidebar Links -->
+			<ul class="list-unstyled components">
+				<li><a href="#!main">Chats</a>
+					<ul style="list-style-type: none">
+						<li ng-repeat="item in chatItems" class="smallText"><a
+							href="#{{ item.link }}"> {{ item.title }} </a></li>
+					</ul>
+				</li>
+				<li><a ng-click="logout()">Logout</a></li>
+			</ul>
+		</nav>
+
+		<div id="content">
+			<button type="button" id="sidebarCollapse"
+				class="customFloating btn navbar-btn">
+				<i class="fa fa-bookmark"></i>
+			</button>
+
+			<div class="container-fluid"
+				style="background-color: #D2D4D6; padding: .7rem; text-align: center">
+				<h5 style="margin: 5px">{{ city }}</h5>
+				<span class="smallText">{{ locDecimDeg }}</span>
+			</div>
+
+			<button type="button" class="customCenterAlign btn"
+				style="background-color: #F2F2F3; padding: 10px"
+				ng-click="toggleAddChat()">Add Chat</button>
 			<!-- Modal -->
 			<div id="addChatModal" style="display: none">
 				<div class="modal-body">
-			    	<form class="form-addchat" role="form" name="addChatForm">
-				    	<input type="text" class="form-control" name="title"
+					<form class="form-addchat" role="form" name="addChatForm">
+						<input type="text" class="form-control" name="title"
 							ng-model="addChat.title" placeholder="Chat title">
 					</form>
 				</div>
-			    <div class="modal-footer">
-					<button type="submit" class="btn btn-default" ng-click="addChat()" ng-disabled="!addChat.title">Add</button>
-			        <button type="button" class="btn btn-default" ng-click="toggleAddChat()">Cancel</button>
-			    </div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-default" ng-click="addChat()"
+						ng-disabled="!addChat.title">Add</button>
+					<button type="button" class="btn btn-default"
+						ng-click="toggleAddChat()">Cancel</button>
+				</div>
 			</div>
-			
+
 			<div>
-			<span class="customCenterAlign btn" style="background-color: #F8F9F9; margin-top: 5px; color: black" 
-				ng-repeat="item in nearchatItems"><a href="#{{ item.link }}" style="color: #663300"> {{ item.title }} </a>
-			</span>
+				<span class="customCenterAlign btn"
+					style="background-color: #F8F9F9; margin-top: 5px; color: black"
+					ng-repeat="item in nearchatItems"><a href="#{{ item.link }}"
+					style="color: #663300"> {{ item.title }} </a> </span>
 			</div>
 		</div>
 	</div>

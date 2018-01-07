@@ -1,5 +1,5 @@
 app.controller('MainCtrl', [ 
-	'$scope','CommonProp', '$http','$firebaseArray','$location',
+	'$scope','CommonProp','$http','$firebaseArray','$location',
 	function($scope,CommonProp,$http,$firebaseArray,$location) {
 
 		var ref = firebase.database().ref();	//root of the database

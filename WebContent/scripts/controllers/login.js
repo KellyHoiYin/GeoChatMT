@@ -18,8 +18,6 @@ app.controller('LoginCtrl', [
             	$scope.loginErrorMessage = error.message;
 	        });
 	}
-	
-
 }]);
 
 // service to allow passing variable between controllers
