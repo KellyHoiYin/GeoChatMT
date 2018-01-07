@@ -5,7 +5,7 @@ app.controller('ChatCtrl', [
 		$scope.id = $routeParams.id;
 		$scope.email = CommonProp.getUser();
 		
-		var ref = firebase.database().ref();	//root
+		var ref = firebase.database().ref();	//root of the database
 		var chatRef = ref.child("chats");
 		var chatList = $firebaseArray(chatRef);
 		
@@ -36,12 +36,14 @@ app.controller('ChatCtrl', [
 		        user: CommonProp.getUser(),
 		        post: $scope.addPost.content
 		    }).then(function(ref) {
+		    	//clear the content of the input
 		    	$scope.addPost.content = '';
 		    }, function(error) {
 		    	alert("Error:", error);
 		    });
 		}
 	    
+	    // update the posts according to the database 
 	    $scope.posts = $firebaseArray(postRef);
 	    
 	    $scope.logout = function() {

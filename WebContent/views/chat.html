@@ -1,47 +1,51 @@
 <div class="container" style="padding: 0px" ng-controller="ChatCtrl">
-	
+
 	<div class="wrapper">
-	
+
 		<nav id="sidebar">
-	        <!-- Sidebar Header -->
-	        <div class="sidebar-header">
-	            <h5 style="margin-top: 0px; margin-bottom: 0px">{{ email }}</h5>
-	        </div>
-	
-	        <!-- Sidebar Links -->
-	        <ul class="list-unstyled components">
-	            <li><a href="#!main">Chats</a>
-	            	<ul style="list-style-type: none">
-	            		<li ng-repeat="item in chatItems" class="smallText"><a href="#{{ item.link }}"> {{ item.title }} </a></li>
-	            	</ul>
-	            </li>
-	            <li><a ng-click="logout()">Logout</a></li>
-	        </ul>
-	     </nav>
-	     
-		<div id="content">
-		    <button type="button" id="sidebarCollapse" class="customFloating btn navbar-btn">
-		        <i class="fa fa-bookmark"></i>
-		    </button>
-		    
-		    <div class="container-fluid"
-			style="background-color: #D2D4D6; padding: 1.5rem; text-align: center">
-			<h5 style="margin: 5px">{{ chatTitle }}</h5>
+			<!-- Sidebar Header -->
+			<div class="sidebar-header">
+				<h5 style="margin-top: 0px; margin-bottom: 0px">{{ email }}</h5>
 			</div>
-			
+
+			<!-- Sidebar Links -->
+			<ul class="list-unstyled components">
+				<li><a href="#!main">Chats</a>
+					<ul style="list-style-type: none">
+						<li ng-repeat="item in chatItems" class="smallText"><a
+							href="#{{ item.link }}"> {{ item.title }} </a></li>
+					</ul></li>
+				<li><a ng-click="logout()">Logout</a></li>
+			</ul>
+		</nav>
+
+		<div id="content">
+			<button type="button" id="sidebarCollapse"
+				class="customFloating btn navbar-btn">
+				<i class="fa fa-bookmark"></i>
+			</button>
+
+			<div class="container-fluid"
+				style="background-color: #D2D4D6; padding: 1.5rem; text-align: center">
+				<h5 style="margin: 5px">{{ chatTitle }}</h5>
+			</div>
+
 			<div class="customChatContainer" ng-repeat="item in posts">
 				<p class="smallText">{{ item.user }}</p>
-				<p class="customRightText">{{ item.post }}</span>
+				<p class="customRightText">
+					{{ item.post }}</span>
 			</div>
-			
-			<div style="margin:50px"></div>
-			
+
+			<div style="margin: 50px"></div>
+
 			<form class="form-addpost" role="form" name="addPostForm">
 				<div class="form-group">
-					<div class="input-group" style="bottom: 0px; position: fixed; width:-webkit-fill-available">
+					<div class="input-group"
+						style="bottom: 0px; position: fixed; width: -webkit-fill-available">
 						<input type="text" class="form-control" name="post"
-							ng-model="addPost.content">
-						<span class="input-group-addon"><a ng-click="addPost()"><i class="fa fa-paper-plane"></i></a></span>
+							ng-model="addPost.content"> <span
+							class="input-group-addon"><a ng-click="addPost()"><i
+								class="fa fa-paper-plane"></i></a></span>
 					</div>
 				</div>
 			</form>

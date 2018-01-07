@@ -1,5 +1,5 @@
 app.controller('RegisterCtrl', [
-	'$scope','$location', '$firebaseAuth', 
+	'$scope','$location','$firebaseAuth', 
 	function($scope,$location,$firebaseAuth) {
 	
 	var auth = $firebaseAuth();

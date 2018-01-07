@@ -1,8 +1,8 @@
 app.controller('MainCtrl', [ 
 	'$scope','CommonProp', '$http','$firebaseArray','$location',
-	function($scope,CommonProp,$http, $firebaseArray,$location) {
+	function($scope,CommonProp,$http,$firebaseArray,$location) {
 
-		var ref = firebase.database().ref();	//root
+		var ref = firebase.database().ref();	//root of the database
 		var chatRef = ref.child("chats");
 		var chatList = $firebaseArray(chatRef);
 		var city = '';

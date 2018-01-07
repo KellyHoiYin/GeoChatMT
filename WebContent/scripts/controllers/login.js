@@ -1,6 +1,6 @@
 app.controller('LoginCtrl', [
-	'$scope','$location', '$firebaseAuth','CommonProp',
-	function($scope,$location,$firebaseAuth, CommonProp) {
+	'$scope','$location','$firebaseAuth','CommonProp',
+	function($scope,$location,$firebaseAuth,CommonProp) {
 	var auth = $firebaseAuth();
 	
 	$scope.login = function(event) {
@@ -22,6 +22,7 @@ app.controller('LoginCtrl', [
 
 }]);
 
+// service to allow passing variable between controllers
 app.service('CommonProp', ['$location','$firebaseAuth',function($location,$firebaseAuth) {
     var user = '';
     var auth = $firebaseAuth();
